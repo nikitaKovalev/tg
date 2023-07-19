@@ -1,0 +1,38 @@
+@mixin ideo-scrollbar {
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 8px;
+        height: 8px;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    &::-webkit-scrollbar-track {
+        background-color: var(--ideo-bg-gray-1);
+    }
+
+    /* scrollbar itself */
+    &::-webkit-scrollbar-thumb {
+        transition: background-color var(--duration);
+
+        background-color: #d7e2f2;
+        border-radius: 100px;
+        border: 4px solid transparent;
+
+        &:hover {
+            background-color: #8C99B2;
+        }
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-resizer {
+        background-color: #f5f8fd;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: #f5f8fd;
+    }
+}

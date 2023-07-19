@@ -5,7 +5,9 @@ import {RouterModule} from '@angular/router';
     standalone: true,
     imports: [RouterModule],
     selector: 'nx-angular-monorepo-root',
-    templateUrl: './app.component.html',
+    template: `
+        <router-outlet></router-outlet>
+    `,
     styleUrls: ['./app.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })

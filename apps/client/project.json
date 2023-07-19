@@ -15,7 +15,13 @@
                 "main": "apps/client/src/main.ts",
                 "polyfills": ["zone.js"],
                 "tsConfig": "apps/client/tsconfig.app.json",
-                "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+                "assets": [
+                    {
+                        "input": "libs/shared/assets/src",
+                        "glob": "**/*",
+                        "output": "assets"
+                    }
+                ],
                 "styles": ["apps/client/src/styles.scss"],
                 "scripts": []
             },
@@ -25,12 +31,18 @@
                         {
                             "type": "initial",
                             "maximumWarning": "500kb",
-                            "maximumError": "1mb"
+                            "maximumError": "5mb"
                         },
                         {
                             "type": "anyComponentStyle",
                             "maximumWarning": "2kb",
-                            "maximumError": "4kb"
+                            "maximumError": "10kb"
+                        }
+                    ],
+                    "fileReplacements": [
+                        {
+                            "replace": "libs/shared/environments/src/environment.ts",
+                            "with": "libs/shared/environments/src/environment.prod.ts"
                         }
                     ],
                     "outputHashing": "all"

@@ -1,0 +1,6 @@
+@mixin max-row($max) {
+    display: -webkit-box;
+    -webkit-line-clamp: $max;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

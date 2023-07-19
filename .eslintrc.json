@@ -1,10 +1,19 @@
 {
     "root": true,
-    "ignorePatterns": ["**/*"],
-    "plugins": ["@nx"],
+    "ignorePatterns": [
+        "**/*"
+    ],
+    "plugins": [
+        "@nx"
+    ],
     "overrides": [
         {
-            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "files": [
+                "*.ts",
+                "*.tsx",
+                "*.js",
+                "*.jsx"
+            ],
             "extends": [
                 "@tinkoff/eslint-config/app",
                 "@tinkoff/eslint-config-angular",
@@ -29,7 +38,19 @@
                         "depConstraints": [
                             {
                                 "sourceTag": "*",
-                                "onlyDependOnLibsWithTags": ["*"]
+                                "onlyDependOnLibsWithTags": [
+                                    "*"
+                                ]
+                            },
+                            {
+                                "sourceTag": "type:feature",
+                                "onlyDependOnLibsWithTags": [
+                                    "type:feature",
+                                    "type:ui",
+                                    "type:util",
+                                    "type:model",
+                                    "type:data-access"
+                                ]
                             }
                         ]
                     }
@@ -49,11 +70,18 @@
             }
         },
         {
-            "files": ["*.ts", "*.tsx"],
+            "files": [
+                "*.ts",
+                "*.tsx"
+            ],
             "parserOptions": {
-                "project": ["./tsconfig.base.json"]
+                "project": [
+                    "./tsconfig.base.json"
+                ]
             },
-            "extends": ["plugin:@nx/typescript"],
+            "extends": [
+                "plugin:@nx/typescript"
+            ],
             "rules": {
                 "@typescript-eslint/explicit-member-accessibility": [
                     "warn",
@@ -64,12 +92,22 @@
             }
         },
         {
-            "files": ["*.js", "*.jsx"],
-            "extends": ["plugin:@nx/javascript"],
+            "files": [
+                "*.js",
+                "*.jsx"
+            ],
+            "extends": [
+                "plugin:@nx/javascript"
+            ],
             "rules": {}
         },
         {
-            "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+            "files": [
+                "*.spec.ts",
+                "*.spec.tsx",
+                "*.spec.js",
+                "*.spec.jsx"
+            ],
             "env": {
                 "jest": true
             },

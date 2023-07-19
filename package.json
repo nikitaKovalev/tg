@@ -4,9 +4,16 @@
     "private": true,
     "license": "MIT",
     "scripts": {
+        "*** Dev ***": "",
+        "start": "nx serve client",
+        "build:dev": "nx run client:build:development",
+        "*** Production ***": "",
+        "build:prod": "nx run client:build:production",
+
         "exec": "ts-node --project tsconfig.base.json",
         "postinstall": "npm run exec -- ./scripts/postinstall.ts",
-        "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
+        "lint": "nx affected:lint",
+        "lint:all": "nx run-many -t lint --all --parallel",
         "prettier": "prettier '**/*.{svg,yml,js,ts,html,md,less,json}' --write --fix",
         "clear-lib": "node ./scripts/clear-lib.ts"
     },
@@ -19,6 +26,7 @@
         "@angular/platform-browser": "~16.1.0",
         "@angular/platform-browser-dynamic": "~16.1.0",
         "@angular/router": "~16.1.0",
+        "@lightech-llc/case-converter": "^0.0.4",
         "@nx/angular": "16.5.3",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
