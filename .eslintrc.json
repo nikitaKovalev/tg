@@ -1,42 +1,84 @@
 {
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nx/javascript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
-      "env": {
-        "jest": true
-      },
-      "rules": {}
-    }
-  ]
+    "root": true,
+    "ignorePatterns": ["**/*"],
+    "plugins": ["@nx"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "extends": [
+                "@tinkoff/eslint-config/app",
+                "@tinkoff/eslint-config-angular",
+                "@tinkoff/eslint-config-angular/rxjs",
+                "@tinkoff/eslint-config-angular/promise",
+                "@tinkoff/eslint-config-angular/imports",
+                "@tinkoff/eslint-config-angular/html-eslint",
+                "@tinkoff/eslint-config-angular/file-progress",
+                "@tinkoff/eslint-config-angular/line-statements",
+                "@tinkoff/eslint-config-angular/member-ordering",
+                "@tinkoff/eslint-config-angular/decorator-position",
+                "@tinkoff/eslint-config-angular/function-return-type",
+                "./scripts/eslint/naming-convention.js",
+                "./scripts/eslint/no-restricted-syntax.js"
+            ],
+            "rules": {
+                "@nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "enforceBuildableLibDependency": true,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "*",
+                                "onlyDependOnLibsWithTags": ["*"]
+                            }
+                        ]
+                    }
+                ],
+                "import/no-unresolved": "off",
+                "import/extensions": [
+                    "error",
+                    "ignorePackages",
+                    {
+                        "js": "never",
+                        "jsx": "never",
+                        "ts": "never",
+                        "tsx": "never"
+                    }
+                ],
+                "@typescript-eslint/promise-function-async": "off"
+            }
+        },
+        {
+            "files": ["*.ts", "*.tsx"],
+            "parserOptions": {
+                "project": ["./tsconfig.base.json"]
+            },
+            "extends": ["plugin:@nx/typescript"],
+            "rules": {
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "warn",
+                    {
+                        "accessibility": "no-public"
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.js", "*.jsx"],
+            "extends": ["plugin:@nx/javascript"],
+            "rules": {}
+        },
+        {
+            "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+            "env": {
+                "jest": true
+            },
+            "rules": {}
+        },
+        {
+            "files": "*.json",
+            "parser": "jsonc-eslint-parser",
+            "rules": {}
+        }
+    ]
 }
