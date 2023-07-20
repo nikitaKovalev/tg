@@ -41,6 +41,13 @@
             },
             "configurations": {
                 "production": {
+                    "allowedCommonJsDependencies": [
+                        "@taiga-ui/core",
+                        "@taiga-ui/cdk",
+                        "@taiga-ui/icons",
+                        "text-mask-core",
+                        "dompurify"
+                    ],
                     "budgets": [
                         {
                             "type": "initial",
