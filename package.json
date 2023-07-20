@@ -11,7 +11,7 @@
         "build:prod": "nx run client:build:production",
         "exec": "ts-node --project tsconfig.base.json",
         "postinstall": "npm run exec -- ./scripts/postinstall.ts",
-        "lint": "nx affected:lint",
+        "lint": "nx affected:lint -t --all",
         "lint:all": "nx run-many -t lint --all --parallel",
         "prettier": "prettier '**/*.{svg,yml,js,ts,html,md,less,json}' --write --fix",
         "clear-lib": "node ./scripts/clear-lib.ts"
