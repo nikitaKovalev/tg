@@ -27,11 +27,11 @@
         "@angular/router": "~16.1.0",
         "@lightech-llc/case-converter": "^0.0.4",
         "@nx/angular": "16.5.3",
-        "@taiga-ui/cdk": "^3.37.0",
-        "@taiga-ui/core": "^3.37.0",
-        "@taiga-ui/icons": "^3.37.0",
-        "@taiga-ui/kit": "^3.37.0",
-        "@taiga-ui/styles": "^3.37.0",
+        "@taiga-ui/cdk": "3.39.0",
+        "@taiga-ui/core": "3.39.0",
+        "@taiga-ui/icons": "3.39.0",
+        "@taiga-ui/kit": "3.39.0",
+        "@taiga-ui/styles": "3.39.0",
         "@tinkoff/ng-dompurify": "3.0.0",
         "dompurify": "2.2.9",
         "rxjs": "~7.8.0",
@@ -88,3 +88,4 @@
         "yarn": "Please use npm instead of yarn to install dependencies"
     }
 }
+
