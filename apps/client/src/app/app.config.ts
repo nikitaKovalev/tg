@@ -15,6 +15,6 @@ export const appConfig: ApplicationConfig = {
         provideRouter(appRoutes, withComponentInputBinding()),
         provideHttpClient(withInterceptors(CASE_CONVERTER_INTERCEPTOR_FUNCTIONS)),
         provideAnimations(),
-        importProvidersFrom(TuiRootModule, BrowserAnimationsModule),
+        importProvidersFrom(BrowserAnimationsModule, TuiRootModule),
     ],
 };

@@ -4,4 +4,5 @@ export interface QueryParameters {
     limit: number;
     offset: number;
     name: string;
+    [key: string]: any;
 }
