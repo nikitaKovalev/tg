@@ -1,0 +1,50 @@
+@use "../variables/input";
+@use "sass:map";
+@import '@taiga-ui/core/styles/mixins/wrapper.scss';
+
+$appearances: (
+    /*
+      Reassign colors values, add new map value for each custom style
+    */
+    '#{input.$default}': (
+        'background': transparent,
+        'border-default': transparent,
+        'border-active': transparent,
+        'border-focus': transparent,
+    ),
+);
+
+@mixin custom-input($appearance: input.$default) {
+    background: map.get($appearances, $appearance, 'background');
+    border-radius: var(--tui-radius-xl);
+    color: var(--tui-text-01);
+    font-size: 1rem;
+
+    &:after {
+        color: map.get($appearances, $appearance, 'border-default');
+    }
+
+    .t-placeholder {
+        font-size: 1rem;
+    }
+
+    @include wrapper-active {
+        &:after {
+            color: map.get($appearances, $appearance, 'border-active');
+        }
+    }
+
+    @include wrapper-focus {
+        &:after {
+            color: map.get($appearances, $appearance, 'border-focus');
+        }
+    }
+
+    @include wrapper-invalid {
+        color: var(--tui-error-fill);
+
+        &:after {
+            color: var(--tui-error-fill);
+        }
+    }
+}

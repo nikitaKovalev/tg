@@ -1,0 +1,14 @@
+@use "../variables/input";
+@use "../mixins/input" as m;
+
+[tuiWrapper][data-appearance=#{input.$default}] {
+    @include m.custom-input(input.$default);
+}
+
+tui-primitive-textfield[data-size='m'] {
+    /*
+      As an example you can override input height for inputs with size 'm' like this:
+      --tui-height: 2.5rem !important;
+    */
+}
+

@@ -1,0 +1,16 @@
+@use "../variables/button";
+@use "../mixins/button" as m;
+@import '@taiga-ui/core/styles/mixins/wrapper.scss';
+
+[tuiWrapper][data-appearance=#{button.$default}] {
+    @include m.custom-button(button.$default);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button[data-size="s"][data-appearance=#{button.$default}] {
+    /*
+      As an example you can override input height for button with size 'm' like this:
+      --tui-height-s: 2.5rem !important;
+    */
+}

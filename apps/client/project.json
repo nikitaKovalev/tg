@@ -32,6 +32,7 @@
                     "node_modules/@taiga-ui/core/styles/taiga-ui-fonts.less",
                     "node_modules/@taiga-ui/styles/taiga-ui-global.less",
                     "libs/shared/styles/src/variables/variables.scss",
+                    "libs/shared/styles/src/overrides/overrides.scss",
                     "apps/client/src/styles.scss"
                 ],
                 "scripts": []
