@@ -1,2 +1,7 @@
 export {RepeatDirective} from './repeat';
-export {TRACK_BY_DIRECTIVES, TrackByIdDirective, TrackByPropDirective} from './track-by';
+export {
+    TRACK_BY_DIRECTIVES,
+    TrackByIdDirective,
+    TrackByIndexDirective,
+    TrackByPropDirective,
+} from './track-by';

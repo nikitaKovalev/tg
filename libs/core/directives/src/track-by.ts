@@ -36,4 +36,23 @@ export class TrackByPropDirective<T> {
     }
 }
 
-export const TRACK_BY_DIRECTIVES = [TrackByIdDirective, TrackByPropDirective] as const;
+@Directive({
+    selector: '[ngForTrackByIndex]',
+    standalone: true,
+})
+export class TrackByIndexDirective<T> {
+    private readonly ngFor = inject(NgForOf<T>, {self: true});
+
+    @Input()
+    ngForOf!: NgIterable<T>;
+
+    constructor() {
+        this.ngFor.ngForTrackBy = (index: number) => index;
+    }
+}
+
+export const TRACK_BY_DIRECTIVES = [
+    TrackByIdDirective,
+    TrackByPropDirective,
+    TrackByIndexDirective,
+] as const;
