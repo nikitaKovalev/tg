@@ -1,5 +1,5 @@
 export default {
-    displayName: 'core-animations',
+    displayName: 'animations',
     preset: '../../../jest.preset.js',
     setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
     coverageDirectory: '../../../coverage/libs/core/animations',
