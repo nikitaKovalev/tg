@@ -4,6 +4,7 @@ import {inject, InjectionToken} from '@angular/core';
 export const WINDOW = new InjectionToken<Window>(
     'An abstraction over global window object',
     {
+        providedIn: 'root',
         factory: (): Window => {
             const {defaultView} = inject(DOCUMENT);
 
