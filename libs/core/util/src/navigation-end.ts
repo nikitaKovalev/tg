@@ -1,6 +1,6 @@
 import {inject, Injector, runInInjectionContext} from '@angular/core';
 import {type Event, NavigationEnd, Router} from '@angular/router';
-import {type Observable, filter} from 'rxjs';
+import {filter, type Observable} from 'rxjs';
 
 import {assertInjector} from './assert-injector';
 

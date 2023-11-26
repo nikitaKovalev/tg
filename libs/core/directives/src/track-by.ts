@@ -1,5 +1,5 @@
 import {NgForOf} from '@angular/common';
-import {type NgIterable, Directive, inject, Input} from '@angular/core';
+import {Directive, inject, Input, type NgIterable} from '@angular/core';
 
 @Directive({
     selector: '[ngForTrackById]',
