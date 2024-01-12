@@ -15,10 +15,7 @@
         },
         "lint": {
             "executor": "@nx/eslint:lint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": ["libs/core/tokens/**/*.ts", "libs/core/tokens/**/*.html"]
-            }
+            "outputs": ["{options.outputFile}"]
         }
     }
 }
