@@ -20,7 +20,6 @@
             "@nx-angular-monorepo/core/directives": ["libs/core/directives/src/index.ts"],
             "@nx-angular-monorepo/core/operators": ["libs/core/operators/src/index.ts"],
             "@nx-angular-monorepo/core/providers": ["libs/core/providers/src/index.ts"],
-            "@nx-angular-monorepo/core/tokens": ["libs/core/tokens/src/index.ts"],
             "@nx-angular-monorepo/core/util": ["libs/core/util/src/index.ts"],
             "@nx-angular-monorepo/shared/assets": ["libs/shared/assets/src/index.ts"],
             "@nx-angular-monorepo/shared/data-access": ["libs/shared/data-access/src/index.ts"],
