@@ -2,7 +2,7 @@
     "name": "util",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/core/util/src",
-    "prefix": "nx-angular-monorepo",
+    "prefix": "tg",
     "tags": [],
     "projectType": "library",
     "targets": {

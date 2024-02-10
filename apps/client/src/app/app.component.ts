@@ -1,18 +1,18 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {SVG_PROVIDER} from '@nx-angular-monorepo/core/providers';
 import {
     TUI_SANITIZER,
     TuiAlertModule,
     TuiDialogModule,
     TuiRootModule,
 } from '@taiga-ui/core';
+import {SVG_PROVIDER} from '@tg/core/providers';
 import {NgDompurifySanitizer} from '@tinkoff/ng-dompurify';
 
 @Component({
     standalone: true,
     imports: [RouterModule, TuiRootModule, TuiDialogModule, TuiAlertModule],
-    selector: 'nx-angular-monorepo-root',
+    selector: 'tg-root',
     template: `
         <tui-root>
             <router-outlet></router-outlet>

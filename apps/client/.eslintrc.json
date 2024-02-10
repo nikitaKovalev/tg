@@ -9,7 +9,7 @@
                     "error",
                     {
                         "type": "attribute",
-                        "prefix": "nxAngularMonorepo",
+                        "prefix": "tg",
                         "style": "camelCase"
                     }
                 ],
@@ -17,7 +17,7 @@
                     "error",
                     {
                         "type": "element",
-                        "prefix": "nx-angular-monorepo",
+                        "prefix": "tg",
                         "style": "kebab-case"
                     }
                 ]

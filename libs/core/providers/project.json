@@ -2,7 +2,7 @@
     "name": "core-providers",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/core/providers/src",
-    "prefix": "nx-angular-monorepo",
+    "prefix": "tg",
     "tags": ["scope:core", "type:providers"],
     "projectType": "library",
     "targets": {

@@ -1,6 +1,6 @@
 {
-  "name": "@nx-angular-monorepo/source",
-  "version": "0.1.1",
+  "name": "@tg/source",
+  "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "scripts": {

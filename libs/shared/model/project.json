@@ -2,7 +2,7 @@
     "name": "shared-model",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/model/src",
-    "prefix": "nx-angular-monorepo",
+    "prefix": "tg",
     "tags": ["scope:shared", "type:model"],
     "projectType": "library",
     "targets": {

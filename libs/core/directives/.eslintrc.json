@@ -11,7 +11,7 @@
                     "error",
                     {
                         "type": "element",
-                        "prefix": "nx-angular-monorepo",
+                        "prefix": "tg",
                         "style": "kebab-case"
                     }
                 ]

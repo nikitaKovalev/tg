@@ -2,7 +2,7 @@
     "name": "shared-util",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/util/src",
-    "prefix": "nx-angular-monorepo",
+    "prefix": "tg",
     "tags": ["scope:shared", "type:util"],
     "projectType": "library",
     "targets": {

@@ -30,7 +30,7 @@
                     "error",
                     {
                         "type": "attribute",
-                        "prefix": "nxAngularStandalone",
+                        "prefix": "tg",
                         "style": "camelCase"
                     }
                 ],
@@ -38,7 +38,7 @@
                     "error",
                     {
                         "type": "element",
-                        "prefix": "nx-angular-standalone",
+                        "prefix": "tg",
                         "style": "kebab-case"
                     }
                 ],

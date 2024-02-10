@@ -2,7 +2,7 @@
     "name": "shared-data-access",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/shared/data-access/src",
-    "prefix": "nx-angular-monorepo",
+    "prefix": "tg",
     "tags": ["scope:shared", "type:data-access"],
     "projectType": "library",
     "targets": {
